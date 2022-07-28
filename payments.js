@@ -15,7 +15,7 @@ function submitPaymentInfo(evt) {
   if (evt) evt.preventDefault(); // when running tests there is no event
 
   let curPayment = createCurPayment();
-
+  //curPayment returns undefined when blank
   if (curPayment) {
     paymentId += 1;
 
@@ -73,6 +73,6 @@ function updateSummary() {
 
   summaryTds[0].innerHTML = '$' + sumPaymentTotal('billAmt');
   summaryTds[1].innerHTML = '$' + sumPaymentTotal('tipAmt');
-  summaryTds[2].innerHTML =  Math.round(tipPercentAvg) + '%';
+  summaryTds[2].innerHTML = Math.round(tipPercentAvg) + '%';
 }
 

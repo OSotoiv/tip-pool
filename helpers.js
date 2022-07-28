@@ -5,7 +5,6 @@ function sumPaymentTotal(type) {
 
   for (let key in allPayments) {
     let payment = allPayments[key];
-
     total += Number(payment[type]);
   }
 

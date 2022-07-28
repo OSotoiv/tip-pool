@@ -30,7 +30,6 @@ function updateServerTable() {
 
   for (let key in allServers) {
     let curServer = allServers[key];
-
     let newTr = document.createElement('tr');
     newTr.setAttribute('id', key);
 
