@@ -14,7 +14,6 @@ describe("Servers test (with setup and tear-down)", function () {
     submitServerInfo();
     expect(serverId).toEqual(0);
   });
-  //tip amount should only work with numbers
   it('should not allow Bill,Tip, to be blank', () => {
     billAmtInput.value = '100'
     tipAmtInput.value = '';
@@ -29,7 +28,6 @@ describe("Servers test (with setup and tear-down)", function () {
     expect(paymentId).toEqual(0);
     expect(Object.keys(allPayments).length).toEqual(0);
   })
-  //earning for server should be divided evenly with only 2decimal places
   it('should divide total tip evenly between servers', () => {
     billAmtInput.value = '100'
     tipAmtInput.value = '20';
