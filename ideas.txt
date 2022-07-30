@@ -1,0 +1,29 @@
+// for (let person of servers){console.log(person.id)}
+// VM2577:1 server1
+// VM2577:1 server2
+// undefined
+// for (let person in servers){console.log(person.id)}
+// 8VM2626:1 undefined
+// undefined
+// for (let person of servers){console.log(person.id)}
+// VM2723:1 server1
+// VM2723:1 server2
+// undefined
+// document.querySelectorAll("serverTable tbody tr")
+// NodeList []length: 0[[Prototype]]: NodeList
+// document.querySelectorAll("serverTable tbody tr td")
+// NodeList []
+// document.querySelectorAll("serverTable tbody td")
+// NodeList []
+// document.querySelectorAll("serverTable tr")
+// NodeList []length: 0[[Prototype]]: NodeList
+// document.querySelectorAll("#serverTable tbody tr")
+// NodeList(3) [tr#server1, tr#server2, tr#server3]0: tr#server1accessKey: ""align: ""ariaAtomic: nullariaAutoComplete: nullariaBusy: nullariaChecked: nullariaColCount: nullariaColIndex: nullariaColSpan: nullariaCurrent: nullariaDescription: nullariaDisabled: nullariaExpanded: nullariaHasPopup: nullariaHidden: nullariaInvalid: nullariaKeyShortcuts: nullariaLabel: nullariaLevel: nullariaLive: nullariaModal: nullariaMultiLine: nullariaMultiSelectable: nullariaOrientation: nullariaPlaceholder: nullariaPosInSet: nullariaPressed: nullariaReadOnly: nullariaRelevant: nullariaRequired: nullariaRoleDescription: nullariaRowCount: nullariaRowIndex: nullariaRowSpan: nullariaSelected: nullariaSetSize: nullariaSort: nullariaValueMax: nullariaValueMin: nullariaValueNow: nullariaValueText: nullassignedSlot: nullattributeStyleMap: StylePropertyMap {size: 0}attributes: NamedNodeMap {0: id, id: id, length: 1}autocapitalize: ""autofocus: falsebaseURI: "file://wsl%24/Ubuntu/home/octavian/Learning/jasmine-testing-exercises/tip-pool/index.html"bgColor: ""cells: HTMLCollection(2) [td, td]ch: ""chOff: ""childElementCount: 2childNodes: NodeList(2) [td, td]0: td1: tdlength: 2[[Prototype]]: NodeListchildren: HTMLCollection(2) [td, td]classList: DOMTokenList [value: '']className: ""clientHeight: 21clientLeft: 0clientTop: 0clientWidth: 472contentEditable: "inherit"dataset: DOMStringMap {}dir: ""draggable: falseelementTiming: ""enterKeyHint: ""firstChild: tdfirstElementChild: tdhidden: falseid: "server1"inert: falseinnerHTML: "<td>lee</td><td>$10.00</td>"innerText: "lee\t$10.00"inputMode: ""isConnected: trueisContentEditable: falselang: ""lastChild: tdlastElementChild: tdlocalName: "tr"namespaceURI: "http://www.w3.org/1999/xhtml"nextElementSibling: tr#server2nextSibling: tr#server2nodeName: "TR"nodeType: 1nodeValue: nullnonce: ""offsetHeight: 21offsetLeft: 0offsetParent: table#serverTableoffsetTop: 21offsetWidth: 472onabort: nullonanimationend: nullonanimationiteration: nullonanimationstart: nullonauxclick: nullonbeforecopy: nullonbeforecut: nullonbeforematch: nullonbeforepaste: nullonbeforexrselect: nullonblur: nulloncancel: nulloncanplay: nulloncanplaythrough: nullonchange: nullonclick: nullonclose: nulloncontextlost: nulloncontextmenu: nulloncontextrestored: nulloncopy: nulloncuechange: nulloncut: nullondblclick: nullondrag: nullondragend: nullondragenter: nullondragleave: nullondragover: nullondragstart: nullondrop: nullondurationchange: nullonemptied: nullonended: nullonerror: nullonfocus: nullonformdata: nullonfullscreenchange: nullonfullscreenerror: nullongotpointercapture: nulloninput: nulloninvalid: nullonkeydown: nullonkeypress: nullonkeyup: nullonload: nullonloadeddata: nullonloadedmetadata: nullonloadstart: nullonlostpointercapture: nullonmousedown: nullonmouseenter: nullonmouseleave: nullonmousemove: nullonmouseout: nullonmouseover: nullonmouseup: nullonmousewheel: nullonpaste: nullonpause: nullonplay: nullonplaying: nullonpointercancel: nullonpointerdown: nullonpointerenter: nullonpointerleave: nullonpointermove: nullonpointerout: nullonpointerover: nullonpointerrawupdate: nullonpointerup: nullonprogress: nullonratechange: nullonreset: nullonresize: nullonscroll: nullonsearch: nullonsecuritypolicyviolation: nullonseeked: nullonseeking: nullonselect: nullonselectionchange: nullonselectstart: nullonslotchange: nullonstalled: nullonsubmit: nullonsuspend: nullontimeupdate: nullontoggle: nullontransitioncancel: nullontransitionend: nullontransitionrun: nullontransitionstart: nullonvolumechange: nullonwaiting: nullonwebkitanimationend: nullonwebkitanimationiteration: nullonwebkitanimationstart: nullonwebkitfullscreenchange: nullonwebkitfullscreenerror: nullonwebkittransitionend: nullonwheel: nullouterHTML: "<tr id=\"server1\"><td>lee</td><td>$10.00</td></tr>"outerText: "lee\t$10.00"ownerDocument: documentparentElement: tbodyparentNode: tbodypart: DOMTokenList [value: '']prefix: nullpreviousElementSibling: nullpreviousSibling: nullrole: nullrowIndex: 1scrollHeight: 21scrollLeft: 0scrollTop: 0scrollWidth: 472sectionRowIndex: 0shadowRoot: nullslot: ""spellcheck: truestyle: CSSStyleDeclaration {accentColor: '', additiveSymbols: '', alignContent: '', alignItems: '', alignSelf: '', …}tabIndex: -1tagName: "TR"textContent: "lee$10.00"title: ""translate: truevAlign: ""virtualKeyboardPolicy: ""[[Prototype]]: HTMLTableRowElement(...)1: tr#server22: tr#server3length: 3[[Prototype]]: NodeList
+// servers = document.querySelectorAll("#serverTable tbody tr")
+// NodeList(3) [tr#server1, tr#server2, tr#server3]
+// let newTd = document.createElement('td')
+// undefined
+// newTd.innerText = "deleteMe"
+// 'deleteMe'
+// servers[0].append(newTd)
+// undefined

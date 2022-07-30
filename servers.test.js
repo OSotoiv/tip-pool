@@ -28,21 +28,7 @@ describe("Servers test (with setup and tear-down)", function () {
     expect(paymentId).toEqual(0);
     expect(Object.keys(allPayments).length).toEqual(0);
   })
-  it('should divide total tip evenly between servers', () => {
-    billAmtInput.value = '100'
-    tipAmtInput.value = '20';
-    submitPaymentInfo();
-    billAmtInput.value = '50'
-    tipAmtInput.value = '10';
-    submitPaymentInfo();
 
-    submitServerInfo();
-    serverNameInput.value = 'Bob';
-    submitServerInfo();
-    let tipAverage = sumPaymentTotal('tipAmt') / Object.keys(allServers).length;
-    expect(tipAverage).toEqual(15.00);
-
-  })
   //handles cents and dollars
 
   afterEach(function () {
@@ -55,3 +41,7 @@ describe("Servers test (with setup and tear-down)", function () {
     paymentId = 0;
   });
 });
+
+
+
+
