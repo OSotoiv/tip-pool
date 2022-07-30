@@ -13,14 +13,15 @@ describe('Payment test(with setup adn tear-down)', () => {
         submitServerInfo();
         serverNameInput.value = 'Bob';
         submitServerInfo();
-        console.dir(allPayments)
-        expect(tipAmt).toEqual(30.00);
+        expect(Object.keys(allPayments).length).toEqual(2);
     })
-    it('should calculat tip amount calculateTipPercent()', () => {
-        let billAmt = "100";
-        let tipAmt = "20";
-        let tipPercent = calculateTipPercent(billAmt, tipAmt);
-        expect(tipPercent).toEqual(20)
+    it('createCurPayment(), should return object with payment info', () => {
+        billAmtInput.value = '100'
+        tipAmtInput.value = '20';
+        let curPayment = createCurPayment();
+        expect(typeof (curPayment)).toBe('object');
+        expect(curPayment.billAmt).toEqual("100");
+        expect(curPayment.tipAmt).toEqual('20');
     })
     it('should appendTd to tr', () => {
         submitServerInfo();
@@ -35,5 +36,6 @@ describe('Payment test(with setup adn tear-down)', () => {
         tipAmtInput.value = '';
         paymentId = 0;
         allPayments = {}
+        for (let td of summaryTds) { td.innerHTML = '' }
     });
 })
