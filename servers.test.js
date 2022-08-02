@@ -21,16 +21,17 @@ describe("Servers test (with setup and tear-down)", function () {
     expect(paymentId).toEqual(0);
     expect(Object.keys(allPayments).length).toEqual(0);
   });
-  //handles cents and dollars
   afterEach(function () {
     serverNameInput.value = "";
     allServers = {};
-    updateServerTable();
     serverId = 0;
     billAmtInput.value = ''
     tipAmtInput.value = '';
     paymentId = 0;
+    for (let td of summaryTds) { td.innerHTML = '' }
+    allPayments = {}
     for (let tr of paymentTbody.children) { tr.remove() }
+    updateServerTable();
   });
 });
 

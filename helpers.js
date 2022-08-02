@@ -8,7 +8,7 @@ function sumPaymentTotal(type) {
     total += Number(payment[type]);
   }
 
-  return total;
+  return Number(total.toFixed(2));
 }
 
 // converts the bill and tip amount into a tip percent
