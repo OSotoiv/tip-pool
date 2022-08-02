@@ -6,9 +6,6 @@ describe('Payment test(with setup adn tear-down)', () => {
         billAmtInput.value = '100'
         tipAmtInput.value = '20';
         submitPaymentInfo();
-        // billAmtInput.value = '50.62'
-        // tipAmtInput.value = '10.62';
-        // submitPaymentInfo();
         expect(Object.keys(allPayments).length).toEqual(1);
     });
     it('createCurPayment(), should return object with payment info', () => {
@@ -30,8 +27,8 @@ describe('Payment test(with setup adn tear-down)', () => {
         billAmtInput.value = ''
         tipAmtInput.value = '';
         paymentId = 0;
-        for (let td of summaryTds) { td.innerHTML = '' }
         allPayments = {}
+        for (let td of summaryTds) { td.innerHTML = '' }
         for (let tr of paymentTbody.childNodes) { tr.remove() }
         updateServerTable();
     });

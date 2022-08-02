@@ -27,14 +27,14 @@ function appendDeleteBtn(newTr) {
   let rmServer = document.createElement('button');
   rmServer.classList.add('rmServer');
   rmServer.dataset.id = newTr.id
-  rmServer.addEventListener('click', removeServer)
+  rmServer.addEventListener('click', removeRow)
   let newTd = document.createElement('td');
-  rmServer.innerText = "remove";
+  rmServer.innerText = "x";
   newTd.append(rmServer);
   newTr.append(newTd);
 }
 
-function removeServer(e) {
+function removeRow(e) {
   if (e) e.preventDefault();
   const id = e.target.dataset.id;
   delete allServers[id];

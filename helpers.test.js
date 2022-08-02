@@ -35,8 +35,8 @@ describe('Helpers test(with setup and tear-down)', () => {
         billAmtInput.value = ''
         tipAmtInput.value = '';
         paymentId = 0;
-        for (let td of summaryTds) { td.innerHTML = '' }
         allPayments = {}
+        for (let td of summaryTds) { td.innerHTML = '' }
         for (let tr of paymentTbody.children) { tr.remove() }
         updateServerTable();
     });
