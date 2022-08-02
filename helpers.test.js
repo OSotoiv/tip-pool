@@ -36,5 +36,6 @@ describe('Helpers test(with setup adn tear-down)', () => {
         tipAmtInput.value = '';
         paymentId = 0;
         allPayments = {}
+        for (let tr of paymentTbody.children) { tr.remove() }
     });
 })

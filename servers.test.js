@@ -21,16 +21,7 @@ describe("Servers test (with setup and tear-down)", function () {
     expect(paymentId).toEqual(0);
     expect(Object.keys(allPayments).length).toEqual(0);
   });
-  it('should not allow Bill/Tip to be words', () => {
-    billAmtInput.value = 'words'
-    tipAmtInput.value = '100';
-    submitPaymentInfo();
-    expect(paymentId).toEqual(0);
-    expect(Object.keys(allPayments).length).toEqual(0);
-  })
-
   //handles cents and dollars
-
   afterEach(function () {
     serverNameInput.value = "";
     allServers = {};
@@ -39,6 +30,7 @@ describe("Servers test (with setup and tear-down)", function () {
     billAmtInput.value = ''
     tipAmtInput.value = '';
     paymentId = 0;
+    for (let tr of paymentTbody.children) { tr.remove() }
   });
 });
 

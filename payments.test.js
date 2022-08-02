@@ -6,8 +6,8 @@ describe('Payment test(with setup adn tear-down)', () => {
         billAmtInput.value = '100'
         tipAmtInput.value = '20';
         submitPaymentInfo();
-        billAmtInput.value = '50'
-        tipAmtInput.value = '10';
+        billAmtInput.value = '50.62'
+        tipAmtInput.value = '10.62';
         submitPaymentInfo();
 
         submitServerInfo();
@@ -37,5 +37,6 @@ describe('Payment test(with setup adn tear-down)', () => {
         paymentId = 0;
         allPayments = {}
         for (let td of summaryTds) { td.innerHTML = '' }
+        for (let tr of paymentTbody.children) { tr.remove() }
     });
 })

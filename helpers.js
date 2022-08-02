@@ -22,3 +22,21 @@ function appendTd(tr, value) {
   newTd.innerText = value;
   tr.append(newTd);
 }
+//appends a remove button to the newTr for each server
+function appendDeleteBtn(newTr) {
+  let rmServer = document.createElement('button');
+  rmServer.classList.add('rmServer');
+  rmServer.dataset.id = newTr.id
+  rmServer.addEventListener('click', removeServer)
+  let newTd = document.createElement('td');
+  rmServer.innerText = "remove";
+  newTd.append(rmServer);
+  newTr.append(newTd);
+}
+
+function removeServer(e) {
+  if (e) e.preventDefault();
+  const id = e.target.dataset.id;
+  delete allServers[id];
+  updateServerTable()
+}
